@@ -69,9 +69,9 @@ export class LogImportacion extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['iniciado', 'procesando', 'completado', 'error', 'cancelado']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'iniciado'},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'iniciado', enumValues: ['iniciado', 'procesando', 'completado', 'error', 'cancelado']},
   })
   estado: string;
 

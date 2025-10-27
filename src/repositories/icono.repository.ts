@@ -8,7 +8,7 @@ export class IconoRepository extends DefaultCrudRepository<
   IconoRelations
 > {
   constructor(
-    @inject('datasources.bbddmysql') dataSource: BbddmysqlDataSource,
+    @inject('datasources.Bbddmysql') dataSource: BbddmysqlDataSource,
   ) {
     super(Icono, dataSource);
   }

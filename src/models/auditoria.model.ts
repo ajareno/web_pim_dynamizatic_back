@@ -49,9 +49,9 @@ export class Auditoria extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['crear', 'editar', 'eliminar', 'consultar']},
     generated: false,
-    mysql: {columnName: 'accion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'accion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, enumValues: ['crear', 'editar', 'eliminar', 'consultar']},
   })
   accion: string;
 

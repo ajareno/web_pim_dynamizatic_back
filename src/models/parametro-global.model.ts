@@ -44,9 +44,9 @@ export class ParametroGlobal extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['texto', 'numero', 'fecha', 'booleano', 'json']},
     generated: false,
-    mysql: {columnName: 'tipo_dato', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'texto'},
+    mysql: {columnName: 'tipo_dato', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'texto', enumValues: ['texto', 'numero', 'fecha', 'booleano', 'json']},
   })
   tipoDato: string;
 

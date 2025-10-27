@@ -76,18 +76,18 @@ export class Tarea extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['pendiente', 'en_progreso', 'completada', 'cancelada']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'pendiente'},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'pendiente', enumValues: ['pendiente', 'en_progreso', 'completada', 'cancelada']},
   })
   estado: string;
 
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['baja', 'media', 'alta', 'critica']},
     generated: false,
-    mysql: {columnName: 'prioridad', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'media'},
+    mysql: {columnName: 'prioridad', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'media', enumValues: ['baja', 'media', 'alta', 'critica']},
   })
   prioridad: string;
 
@@ -127,9 +127,9 @@ export class Tarea extends Entity {
 
   @property({
     type: 'string',
-    jsonSchema: {nullable: true},
+    jsonSchema: {nullable: true, enum: ['dias_antes_fin', 'al_completar', 'diario', 'semanal']},
     generated: false,
-    mysql: {columnName: 'tipo_notificacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'dias_antes_fin'},
+    mysql: {columnName: 'tipo_notificacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'dias_antes_fin', enumValues: ['dias_antes_fin', 'al_completar', 'diario', 'semanal']},
   })
   tipoNotificacion?: string;
 

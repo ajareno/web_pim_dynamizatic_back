@@ -38,9 +38,9 @@ export class ProductoMultimedia extends Entity {
 
   @property({
     type: 'string',
-    jsonSchema: {nullable: true},
+    jsonSchema: {nullable: true, enum: ['galeria', 'principal', 'miniatura', 'detalle']},
     generated: false,
-    mysql: {columnName: 'tipo_uso', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'galeria'},
+    mysql: {columnName: 'tipo_uso', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'galeria', enumValues: ['galeria', 'principal', 'miniatura', 'detalle']},
   })
   tipoUso?: string;
 

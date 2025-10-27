@@ -121,9 +121,9 @@ export class Producto extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['borrador', 'revision', 'aprobado', 'publicado', 'archivado']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'borrador'},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'borrador', enumValues: ['borrador', 'revision', 'aprobado', 'publicado', 'archivado']},
   })
   estado: string;
 

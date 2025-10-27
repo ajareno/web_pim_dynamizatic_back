@@ -81,9 +81,9 @@ export class ProductoMarketplace extends Entity {
 
   @property({
     type: 'string',
-    jsonSchema: {nullable: true},
+    jsonSchema: {nullable: true, enum: ['pendiente', 'sincronizado', 'error', 'procesando']},
     generated: false,
-    mysql: {columnName: 'estado_sincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'pendiente'},
+    mysql: {columnName: 'estado_sincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'pendiente', enumValues: ['pendiente', 'sincronizado', 'error', 'procesando']},
   })
   estadoSincronizacion?: string;
 

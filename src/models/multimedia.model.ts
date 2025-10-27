@@ -46,9 +46,9 @@ export class Multimedia extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['imagen', 'video', 'audio', 'documento']},
     generated: false,
-    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, enumValues: ['imagen', 'video', 'audio', 'documento']},
   })
   tipo: string;
 

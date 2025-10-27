@@ -134,22 +134,22 @@ export class Usuario extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_creacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
-  usuCreacion: number;
+  usuarioCreacion: number;
 
   @property({
     type: 'number',
     jsonSchema: {nullable: true},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_modificacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuModificacion?: number;
+  usuarioModificacion?: number;
 
   @property({
     type: 'date',
@@ -165,9 +165,9 @@ export class Usuario extends Entity {
     precision: 10,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_inactivo', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuario_inactivo', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuInactivo?: number;
+  usuarioInactivo?: number;
 
   // Define well-known properties here
 

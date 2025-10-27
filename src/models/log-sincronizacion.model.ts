@@ -38,18 +38,18 @@ export class LogSincronizacion extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['exportacion', 'importacion', 'bidireccional']},
     generated: false,
-    mysql: {columnName: 'tipo_sincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'tipo_sincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, enumValues: ['exportacion', 'importacion', 'bidireccional']},
   })
   tipoSincronizacion: string;
 
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['iniciado', 'en_progreso', 'completado', 'error']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, enumValues: ['iniciado', 'en_progreso', 'completado', 'error']},
   })
   estado: string;
 

@@ -84,9 +84,9 @@ export class LogAcceso extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['exitoso', 'fallido', 'bloqueado']},
     generated: false,
-    mysql: {columnName: 'resultado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'exitoso'},
+    mysql: {columnName: 'resultado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'exitoso', enumValues: ['exitoso', 'fallido', 'bloqueado']},
   })
   resultado: string;
 

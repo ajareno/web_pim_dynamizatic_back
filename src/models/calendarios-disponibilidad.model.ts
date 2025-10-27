@@ -22,10 +22,10 @@ export class CalendariosDisponibilidad extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioId: number;
 
@@ -33,10 +33,10 @@ export class CalendariosDisponibilidad extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 5,
+    precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 5, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -87,22 +87,22 @@ export class CalendariosDisponibilidad extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_creacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
-  usuCreacion: number;
+  usuarioCreacion: number;
 
   @property({
     type: 'number',
     jsonSchema: {nullable: true},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_modificacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuModificacion?: number;
+  usuarioModificacion?: number;
 
   // Define well-known properties here
 

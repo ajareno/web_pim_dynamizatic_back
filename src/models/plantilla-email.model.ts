@@ -7,11 +7,11 @@ export class PlantillaEmail extends Entity {
   @property({
     type: 'number',
     jsonSchema: {nullable: false},
-    precision: 5,
+    precision: 6,
     scale: 0,
     generated: 1,
     id: 1,
-    mysql: {columnName: 'id', dataType: 'smallint', dataLength: null, dataPrecision: 5, dataScale: 0, nullable: 'N', generated: 1},
+    mysql: {columnName: 'id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: 1},
   })
   id?: number;
 
@@ -19,10 +19,10 @@ export class PlantillaEmail extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 5,
+    precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'idioma_id', dataType: 'smallint', dataLength: null, dataPrecision: 5, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'idioma_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   idiomaId: number;
 
@@ -68,9 +68,8 @@ export class PlantillaEmail extends Entity {
   @property({
     type: 'Binary',
     jsonSchema: {nullable: true},
-    length: 4294967295,
     generated: false,
-    mysql: {columnName: 'cuerpo', dataType: 'longblob', dataLength: 4294967295, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'cuerpo', dataType: 'longblob', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   cuerpo?: Buffer;
 
@@ -94,22 +93,22 @@ export class PlantillaEmail extends Entity {
     type: 'number',
     required: true,
     jsonSchema: {nullable: false},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_creacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
-  usuCreacion: number;
+  usuarioCreacion: number;
 
   @property({
     type: 'number',
     jsonSchema: {nullable: true},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_modificacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuModificacion?: number;
+  usuarioModificacion?: number;
 
   @property({
     type: 'date',
@@ -122,12 +121,12 @@ export class PlantillaEmail extends Entity {
   @property({
     type: 'number',
     jsonSchema: {nullable: true},
-    precision: 10,
+    precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_inactivo', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuario_inactivo', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuInactivo?: number;
+  usuarioInactivo?: number;
 
   // Define well-known properties here
 

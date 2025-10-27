@@ -68,18 +68,18 @@ export class Notificacion extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['sistema', 'email', 'push', 'sms']},
     generated: false,
-    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'sistema'},
+    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'sistema', enumValues: ['sistema', 'email', 'push', 'sms']},
   })
   tipo: string;
 
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['pendiente', 'enviado', 'leido', 'error']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'pendiente'},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'pendiente', enumValues: ['pendiente', 'enviado', 'leido', 'error']},
   })
   estado: string;
 

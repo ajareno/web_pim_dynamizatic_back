@@ -46,18 +46,18 @@ export class Catalogo extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['digital', 'impreso', 'web', 'app']},
     generated: false,
-    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'digital'},
+    mysql: {columnName: 'tipo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'digital', enumValues: ['digital', 'impreso', 'web', 'app']},
   })
   tipo: string;
 
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['borrador', 'revision', 'aprobado', 'publicado']},
     generated: false,
-    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'borrador'},
+    mysql: {columnName: 'estado', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'borrador', enumValues: ['borrador', 'revision', 'aprobado', 'publicado']},
   })
   estado: string;
 

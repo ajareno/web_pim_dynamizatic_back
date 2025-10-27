@@ -56,9 +56,9 @@ export class CampoDinamico extends Entity {
   @property({
     type: 'string',
     required: true,
-    jsonSchema: {nullable: false},
+    jsonSchema: {nullable: false, enum: ['texto', 'numero', 'fecha', 'select', 'checkbox', 'radio', 'textarea']},
     generated: false,
-    mysql: {columnName: 'tipo_campo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'tipo_campo', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, enumValues: ['texto', 'numero', 'fecha', 'select', 'checkbox', 'radio', 'textarea']},
   })
   tipoCampo: string;
 
