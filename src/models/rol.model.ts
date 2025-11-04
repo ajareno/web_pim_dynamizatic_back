@@ -20,7 +20,7 @@ export class Rol extends Entity {
     precision: 5,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 5, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 5, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -38,7 +38,7 @@ export class Rol extends Entity {
     jsonSchema: {nullable: true},
     length: 1,
     generated: false,
-    mysql: {columnName: 'activo_sn', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'activoSn', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   activoSn?: string;
 
@@ -64,7 +64,7 @@ export class Rol extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_creacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaCreacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaCreacion?: string;
 
@@ -72,7 +72,7 @@ export class Rol extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_modificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaModificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaModificacion?: string;
 
@@ -83,7 +83,7 @@ export class Rol extends Entity {
     precision: 10,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioCreacion: number;
 
@@ -93,7 +93,7 @@ export class Rol extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioModificacion?: number;
 
@@ -101,7 +101,7 @@ export class Rol extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_inactivo', dataType: 'datetime', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaInactivo', dataType: 'datetime', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaInactivo?: string;
 
@@ -111,7 +111,7 @@ export class Rol extends Entity {
     precision: 10,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_inactivo', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioInactivo', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioInactivo?: number;
 

@@ -179,7 +179,7 @@ export class IdiomaController {
     if (filter?.offset) {
       filtros += ` OFFSET ${filter?.offset}`;
     }
-    const query = `SELECT id, nombre, iso, activo_sn AS activoSn FROM idioma${filtros}`;
+    const query = `SELECT id, nombre, iso, activoSn FROM idioma${filtros}`;
     const registros = await dataSource.execute(query);
     return registros;
   }
@@ -256,7 +256,7 @@ export class IdiomaController {
     try {
       const dataSource = this.idiomaRepository.dataSource;
       //Borra la tabla con dependencia
-      //let query = `DELETE FROM nivel_idioma WHERE idioma_id = ${id}`;
+      //let query = `DELETE FROM nivel_idioma WHERE idiomaId = ${id}`;
       //await dataSource.execute(query);
       //Borra el gasto
       await this.idiomaRepository.deleteById(id);

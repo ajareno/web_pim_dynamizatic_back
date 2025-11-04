@@ -21,7 +21,7 @@ export class Auditoria extends Entity {
     precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -31,7 +31,7 @@ export class Auditoria extends Entity {
     jsonSchema: {nullable: false},
     length: 100,
     generated: false,
-    mysql: {columnName: 'tabla_afectada', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'tablaAfectada', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
   })
   tablaAfectada: string;
 
@@ -42,7 +42,7 @@ export class Auditoria extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'id_registro', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'idRegistro', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   idRegistro: number;
 
@@ -62,7 +62,7 @@ export class Auditoria extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioId: number;
 
@@ -71,7 +71,7 @@ export class Auditoria extends Entity {
     jsonSchema: {nullable: true},
     length: 45,
     generated: false,
-    mysql: {columnName: 'ip_address', dataType: 'varchar', dataLength: 45, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'ipAddress', dataType: 'varchar', dataLength: 45, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   ipAddress?: string;
 
@@ -80,7 +80,7 @@ export class Auditoria extends Entity {
     jsonSchema: {nullable: true},
     length: 500,
     generated: false,
-    mysql: {columnName: 'user_agent', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'userAgent', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   userAgent?: string;
 
@@ -88,7 +88,7 @@ export class Auditoria extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'valores_anteriores', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'valoresAnteriores', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   valoresAnteriores?: string;
 
@@ -96,7 +96,7 @@ export class Auditoria extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'valores_nuevos', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'valoresNuevos', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   valoresNuevos?: string;
 
@@ -105,7 +105,7 @@ export class Auditoria extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_accion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaAccion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaAccion?: string;
 

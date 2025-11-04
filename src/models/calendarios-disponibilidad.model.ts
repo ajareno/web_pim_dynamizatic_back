@@ -25,7 +25,7 @@ export class CalendariosDisponibilidad extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioId: number;
 
@@ -36,7 +36,7 @@ export class CalendariosDisponibilidad extends Entity {
     precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -71,7 +71,7 @@ export class CalendariosDisponibilidad extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_creacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaCreacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaCreacion?: string;
 
@@ -79,7 +79,7 @@ export class CalendariosDisponibilidad extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_modificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaModificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaModificacion?: string;
 
@@ -90,7 +90,7 @@ export class CalendariosDisponibilidad extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioCreacion: number;
 
@@ -100,7 +100,7 @@ export class CalendariosDisponibilidad extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioModificacion?: number;
 

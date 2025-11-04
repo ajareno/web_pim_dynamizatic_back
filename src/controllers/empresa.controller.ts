@@ -93,7 +93,7 @@ export class EmpresaController {
     // Recuperamos los registros y llamamos a la función procesaRegistrosConImagenMiniatura que nos incluye las imagenMiniatura en la consulta
     //
     const dataSource = this.empresaRepository.dataSource;
-    const camposSelect = "id, codigo, nombre, descripcion, activo_sn as activoSn, tiempo_inactividad as tiempoInactividad"
+    const camposSelect = "id, codigo, nombre, descripcion, activoSn, tiempoInactividad"
     return await SqlFilterUtil.ejecutarQuerySelect(dataSource, 'empresa', filter, camposSelect);
   }
 
@@ -145,7 +145,7 @@ export class EmpresaController {
     try {
       const dataSource = this.empresaRepository.dataSource;
       // Borrar las imagenes de empresa
-      let query = `DELETE FROM archivo WHERE id_tabla = ${id}`;
+      let query = `DELETE FROM archivo WHERE idTabla = ${id}`;
       await dataSource.execute(query);
       //Borra la empresa
       await this.empresaRepository.deleteById(id);

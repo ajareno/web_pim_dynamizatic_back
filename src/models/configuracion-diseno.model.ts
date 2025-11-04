@@ -21,7 +21,7 @@ export class ConfiguracionDiseno extends Entity {
     precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -30,7 +30,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     length: 7,
     generated: false,
-    mysql: {columnName: 'color_primario', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#007bff'},
+    mysql: {columnName: 'colorPrimario', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#007bff'},
   })
   colorPrimario?: string;
 
@@ -39,7 +39,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     length: 7,
     generated: false,
-    mysql: {columnName: 'color_secundario', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#6c757d'},
+    mysql: {columnName: 'colorSecundario', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#6c757d'},
   })
   colorSecundario?: string;
 
@@ -48,7 +48,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     length: 7,
     generated: false,
-    mysql: {columnName: 'color_acento', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#28a745'},
+    mysql: {columnName: 'colorAcento', dataType: 'varchar', dataLength: 7, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: '#28a745'},
   })
   colorAcento?: string;
 
@@ -75,7 +75,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     length: 100,
     generated: false,
-    mysql: {columnName: 'fuente_principal', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'Arial, sans-serif'},
+    mysql: {columnName: 'fuentePrincipal', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'Arial, sans-serif'},
   })
   fuentePrincipal?: string;
 
@@ -83,7 +83,7 @@ export class ConfiguracionDiseno extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'configuracion_personalizada', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'configuracionPersonalizada', dataType: 'longtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   configuracionPersonalizada?: string;
 
@@ -92,7 +92,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     length: 1,
     generated: false,
-    mysql: {columnName: 'activo_sn', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'S'},
+    mysql: {columnName: 'activoSn', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'S'},
   })
   activoSn?: string;
 
@@ -101,7 +101,7 @@ export class ConfiguracionDiseno extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_creacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaCreacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaCreacion?: string;
 
@@ -109,7 +109,7 @@ export class ConfiguracionDiseno extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_modificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaModificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaModificacion?: string;
 
@@ -120,7 +120,7 @@ export class ConfiguracionDiseno extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioCreacion: number;
 
@@ -130,7 +130,7 @@ export class ConfiguracionDiseno extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioModificacion?: number;
 

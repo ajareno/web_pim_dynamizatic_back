@@ -46,7 +46,7 @@ export class ParametroGlobal extends Entity {
     required: true,
     jsonSchema: {nullable: false, enum: ['texto', 'numero', 'fecha', 'booleano', 'json']},
     generated: false,
-    mysql: {columnName: 'tipo_dato', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'texto', enumValues: ['texto', 'numero', 'fecha', 'booleano', 'json']},
+    mysql: {columnName: 'tipoDato', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'N', generated: false, default: 'texto', enumValues: ['texto', 'numero', 'fecha', 'booleano', 'json']},
   })
   tipoDato: string;
 
@@ -64,7 +64,7 @@ export class ParametroGlobal extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_creacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaCreacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaCreacion?: string;
 
@@ -72,7 +72,7 @@ export class ParametroGlobal extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_modificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaModificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaModificacion?: string;
 
@@ -83,7 +83,7 @@ export class ParametroGlobal extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioCreacion: number;
 
@@ -93,7 +93,7 @@ export class ParametroGlobal extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioModificacion?: number;
 

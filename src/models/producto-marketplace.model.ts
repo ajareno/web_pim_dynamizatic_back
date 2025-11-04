@@ -21,7 +21,7 @@ export class ProductoMarketplace extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'producto_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'productoId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   productoId: number;
 
@@ -32,7 +32,7 @@ export class ProductoMarketplace extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'marketplace_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'marketplaceId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   marketplaceId: number;
 
@@ -41,7 +41,7 @@ export class ProductoMarketplace extends Entity {
     jsonSchema: {nullable: true},
     length: 200,
     generated: false,
-    mysql: {columnName: 'titulo_personalizado', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'tituloPersonalizado', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   tituloPersonalizado?: string;
 
@@ -49,7 +49,7 @@ export class ProductoMarketplace extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'descripcion_personalizada', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'descripcionPersonalizada', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   descripcionPersonalizada?: string;
 
@@ -58,7 +58,7 @@ export class ProductoMarketplace extends Entity {
     jsonSchema: {nullable: true},
     length: 500,
     generated: false,
-    mysql: {columnName: 'palabras_clave_personalizadas', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'palabrasClavePersonalizadas', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   palabrasClavePersonalizadas?: string;
 
@@ -67,7 +67,7 @@ export class ProductoMarketplace extends Entity {
     jsonSchema: {nullable: true},
     length: 1,
     generated: false,
-    mysql: {columnName: 'activo_en_marketplace', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'S'},
+    mysql: {columnName: 'activoEnMarketplace', dataType: 'varchar', dataLength: 1, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'S'},
   })
   activoEnMarketplace?: string;
 
@@ -75,7 +75,7 @@ export class ProductoMarketplace extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_ultima_sincronizacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaUltimaSincronizacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaUltimaSincronizacion?: string;
 
@@ -83,7 +83,7 @@ export class ProductoMarketplace extends Entity {
     type: 'string',
     jsonSchema: {nullable: true, enum: ['pendiente', 'sincronizado', 'error', 'procesando']},
     generated: false,
-    mysql: {columnName: 'estado_sincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'pendiente', enumValues: ['pendiente', 'sincronizado', 'error', 'procesando']},
+    mysql: {columnName: 'estadoSincronizacion', dataType: 'enum', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'pendiente', enumValues: ['pendiente', 'sincronizado', 'error', 'procesando']},
   })
   estadoSincronizacion?: string;
 
@@ -91,7 +91,7 @@ export class ProductoMarketplace extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'mensaje_error', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'mensajeError', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   mensajeError?: string;
 
@@ -100,7 +100,7 @@ export class ProductoMarketplace extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_creacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaCreacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaCreacion?: string;
 
@@ -108,7 +108,7 @@ export class ProductoMarketplace extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_modificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaModificacion', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaModificacion?: string;
 
@@ -119,7 +119,7 @@ export class ProductoMarketplace extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_creacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioCreacion: number;
 
@@ -129,7 +129,7 @@ export class ProductoMarketplace extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_modificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false},
   })
   usuarioModificacion?: number;
 

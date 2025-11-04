@@ -268,7 +268,7 @@ export class UsuariosController {
 
       }
     }
-    const query = `SELECT COUNT(*) AS count FROM usuario${filtros}`;
+    const query = `SELECT COUNT(*) AS count FROM vista_usuario_rol_idioma${filtros}`;
     const registros = await dataSource.execute(query, []);
     return registros[0];
   }
@@ -340,7 +340,7 @@ export class UsuariosController {
     if (filter?.offset) {
       filtros += ` OFFSET ${filter?.offset}`;
     }
-    const query = `SELECT * FROM usuario${filtros}`;
+    const query = `SELECT * FROM vista_usuario_rol_idioma${filtros}`;
     const registros = await dataSource.execute(query);
     return registros;
   }
@@ -392,7 +392,7 @@ export class UsuariosController {
 
         // Obtengo la plantilla del correo
         const dataSourcePlantillaEmail = this.plantillaEmailRepository.dataSource;
-        query = `SELECT * FROM plantilla_email WHERE nombre_plantilla="${nombrePlantilla}";`;
+        query = `SELECT * FROM plantilla_email WHERE nombrePlantilla="${nombrePlantilla}";`;
         const plantillaRegistro = await dataSourcePlantillaEmail.execute(query);
         let htmlContent = plantillaRegistro[0]['cuerpo'];
 
@@ -418,7 +418,7 @@ export class UsuariosController {
 
         // Obtengo los archivos de la plantilla
         const dataSourceArchivo = this.plantillaEmailRepository.dataSource;
-        query = `SELECT * FROM archivo WHERE id_tabla=${plantillaRegistro[0]['id']};`;
+        query = `SELECT * FROM archivo WHERE idTabla=${plantillaRegistro[0]['id']};`;
         const archivos = await dataSourceArchivo.execute(query);
 
         // Incluyo las imágenes insertadas en la plantilla
@@ -537,11 +537,11 @@ export class UsuariosController {
     @param.path.number('codigoRecuperacion') codigoRecuperacion: number,
   ): Promise<Number> {
     const dataSource = this.usuarioRestablecerPasswordRepository.dataSource;
-    let query = `SELECT usuario_id FROM usuario_restablecer_password WHERE codigoRecuperacion = '${codigoRecuperacion}'`;
+    let query = `SELECT usuarioId FROM usuario_restablecer_password WHERE codigoRecuperacion = '${codigoRecuperacion}'`;
     const registros = await dataSource.execute(query);
     //Si existe el registro, devolvemos el id del usuario
     if (registros.length > 0) {
-      return registros[0]['usuario_id'];
+      return registros[0]['usuarioId'];
     }
     return -1;
   }
@@ -584,13 +584,10 @@ export class UsuariosController {
       const dataSource = this.usuarioRepository.dataSource;
 
       // Eliminamos los registros relacionados
-      let query = `DELETE FROM usuario_restablecer_password WHERE usuario_id = ${id}`;
+      let query = `DELETE FROM usuario_restablecer_password WHERE usuarioId = ${id}`;
       await dataSource.execute(query);
 
-      query = `DELETE FROM usuario_credenciales WHERE usuario_id = ${id}`;
-      await dataSource.execute(query);
-
-      query = `DELETE FROM tipo_usuario_usuario WHERE usuario_id = ${id}`;
+      query = `DELETE FROM usuario_credenciales WHERE usuarioId = ${id}`;
       await dataSource.execute(query);
 
       // Finalmente eliminamos el usuario
@@ -674,7 +671,7 @@ export class UsuariosController {
   async obtenerUsuarioAvatar(@param.path.number('id') id: number,): Promise<Object[]> {
 
     const dataSource = this.usuarioRepository.dataSource;
-    const query = `SELECT url FROM archivo WHERE tabla = 'usuario' AND id_tabla = ${id}`;
+    const query = `SELECT url FROM archivo WHERE tabla = 'usuario' AND idTabla = ${id}`;
     const registros = await dataSource.execute(query);
     return registros;
   };
@@ -749,16 +746,16 @@ export class UsuariosController {
 
       //Comprueba si la contraseña del usuario existe en la base de datos
       const dataSource = this.usuarioCredencialesRepository.dataSource;
-      let query = `SELECT * FROM usuario_credenciales WHERE usuario_id = '${idUsuario}'`;
+      let query = `SELECT * FROM usuario_credenciales WHERE usuarioId = '${idUsuario}'`;
       const registros = await dataSource.execute(query);
 
       //Si no existe, la crea
       if (registros.length === 0) {
-        query = `INSERT INTO usuario_credenciales (password, usuario_id) VALUES ('${usuarioCredenciales.password}', ${idUsuario})`;
+        query = `INSERT INTO usuario_credenciales (password, usuarioId) VALUES ('${usuarioCredenciales.password}', ${idUsuario})`;
         await dataSource.execute(query);
       } else {
         //Si existe, la actualiza
-        query = `UPDATE usuario_credenciales SET password='${usuarioCredenciales.password}' WHERE usuario_id=${idUsuario}`;
+        query = `UPDATE usuario_credenciales SET password='${usuarioCredenciales.password}' WHERE usuarioId=${idUsuario}`;
         await dataSource.execute(query);
       }
 

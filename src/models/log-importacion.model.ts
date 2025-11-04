@@ -21,7 +21,7 @@ export class LogImportacion extends Entity {
     precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -32,7 +32,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioId: number;
 
@@ -42,7 +42,7 @@ export class LogImportacion extends Entity {
     jsonSchema: {nullable: false},
     length: 100,
     generated: false,
-    mysql: {columnName: 'tabla_destino', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'tablaDestino', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
   })
   tablaDestino: string;
 
@@ -52,7 +52,7 @@ export class LogImportacion extends Entity {
     jsonSchema: {nullable: false},
     length: 200,
     generated: false,
-    mysql: {columnName: 'nombre_archivo', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'nombreArchivo', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
   })
   nombreArchivo: string;
 
@@ -62,7 +62,7 @@ export class LogImportacion extends Entity {
     jsonSchema: {nullable: false},
     length: 500,
     generated: false,
-    mysql: {columnName: 'ruta_archivo', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
+    mysql: {columnName: 'rutaArchivo', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'N', generated: false},
   })
   rutaArchivo: string;
 
@@ -81,7 +81,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'total_registros', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
+    mysql: {columnName: 'totalRegistros', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
   })
   totalRegistros?: number;
 
@@ -91,7 +91,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'registros_procesados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
+    mysql: {columnName: 'registrosProcesados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
   })
   registrosProcesados?: number;
 
@@ -101,7 +101,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'registros_insertados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
+    mysql: {columnName: 'registrosInsertados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
   })
   registrosInsertados?: number;
 
@@ -111,7 +111,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'registros_actualizados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
+    mysql: {columnName: 'registrosActualizados', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
   })
   registrosActualizados?: number;
 
@@ -121,7 +121,7 @@ export class LogImportacion extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'registros_con_error', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
+    mysql: {columnName: 'registrosConError', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'Y', generated: false, default: 0},
   })
   registrosConError?: number;
 
@@ -130,7 +130,7 @@ export class LogImportacion extends Entity {
     jsonSchema: {nullable: true},
     length: 500,
     generated: false,
-    mysql: {columnName: 'archivo_errores', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'archivoErrores', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   archivoErrores?: string;
 
@@ -138,7 +138,7 @@ export class LogImportacion extends Entity {
     type: 'string',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'mensaje_resultado', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'mensajeResultado', dataType: 'mediumtext', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   mensajeResultado?: string;
 
@@ -147,7 +147,7 @@ export class LogImportacion extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_inicio', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaInicio', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaInicio?: string;
 
@@ -155,7 +155,7 @@ export class LogImportacion extends Entity {
     type: 'date',
     jsonSchema: {nullable: true},
     generated: false,
-    mysql: {columnName: 'fecha_fin', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'fechaFin', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   fechaFin?: string;
 

@@ -155,7 +155,7 @@ export class PlantillaEmailController {
     try {
       const dataSource = this.plantillaEmailRepository.dataSource;
       // Borrar las imagenes de plantilla
-      let query = `DELETE FROM archivo WHERE id_tabla = ${id}`;
+      let query = `DELETE FROM archivo WHERE idTabla = ${id}`;
       await dataSource.execute(query);
       //Borra la plantilla
       await this.plantillaEmailRepository.deleteById(id);
@@ -217,13 +217,13 @@ export class PlantillaEmailController {
 
       // Obtengo la plantilla del correo
       const dataSource = this.plantillaEmailRepository.dataSource;
-      query = `SELECT * FROM plantilla_email WHERE nombre_plantilla="${nombrePlantilla}";`;
+      query = `SELECT * FROM plantilla_email WHERE nombrePlantilla="${nombrePlantilla}";`;
       const plantillaRegistro = await dataSource.execute(query);
       let htmlContent = plantillaRegistro[0]['cuerpo'];
 
       // Obtengo los archivos de la plantilla
       const dataSourceArchivo = this.plantillaEmailRepository.dataSource;
-      query = `SELECT * FROM archivo WHERE id_tabla=${plantillaRegistro[0]['id']};`;
+      query = `SELECT * FROM archivo WHERE idTabla=${plantillaRegistro[0]['id']};`;
       const archivos = await dataSourceArchivo.execute(query);
 
       // Incluyo las imÃ¡genes insertadas en la plantilla

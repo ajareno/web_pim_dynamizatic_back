@@ -21,7 +21,7 @@ export class LogAcceso extends Entity {
     precision: 6,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'empresa_id', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'empresaId', dataType: 'smallint', dataLength: null, dataPrecision: 6, dataScale: 0, nullable: 'N', generated: false},
   })
   empresaId: number;
 
@@ -32,7 +32,7 @@ export class LogAcceso extends Entity {
     precision: 11,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usuario_id', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioId', dataType: 'int', dataLength: null, dataPrecision: 11, dataScale: 0, nullable: 'N', generated: false},
   })
   usuarioId: number;
 
@@ -41,7 +41,7 @@ export class LogAcceso extends Entity {
     jsonSchema: {nullable: true},
     length: 45,
     generated: false,
-    mysql: {columnName: 'ip_address', dataType: 'varchar', dataLength: 45, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'ipAddress', dataType: 'varchar', dataLength: 45, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   ipAddress?: string;
 
@@ -50,7 +50,7 @@ export class LogAcceso extends Entity {
     jsonSchema: {nullable: true},
     length: 500,
     generated: false,
-    mysql: {columnName: 'user_agent', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'userAgent', dataType: 'varchar', dataLength: 500, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   userAgent?: string;
 
@@ -68,7 +68,7 @@ export class LogAcceso extends Entity {
     jsonSchema: {nullable: true},
     length: 100,
     generated: false,
-    mysql: {columnName: 'sistema_operativo', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'sistemaOperativo', dataType: 'varchar', dataLength: 100, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   sistemaOperativo?: string;
 
@@ -95,7 +95,7 @@ export class LogAcceso extends Entity {
     jsonSchema: {nullable: true},
     length: 200,
     generated: false,
-    mysql: {columnName: 'motivo_fallo', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
+    mysql: {columnName: 'motivoFallo', dataType: 'varchar', dataLength: 200, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   motivoFallo?: string;
 
@@ -104,7 +104,7 @@ export class LogAcceso extends Entity {
     jsonSchema: {nullable: true},
     generated: false,
     defaultFn: 'now',
-    mysql: {columnName: 'fecha_acceso', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
+    mysql: {columnName: 'fechaAcceso', dataType: 'timestamp', dataLength: null, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false, default: 'CURRENT_TIMESTAMP'},
   })
   fechaAcceso?: string;
 
