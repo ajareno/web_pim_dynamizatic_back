@@ -29,15 +29,6 @@ export class Permiso extends Entity {
     jsonSchema: {nullable: true},
     length: 50,
     generated: false,
-    mysql: {columnName: 'modulo', dataType: 'varchar', dataLength: 50, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
-  })
-  modulo?: string;
-
-  @property({
-    type: 'string',
-    jsonSchema: {nullable: true},
-    length: 50,
-    generated: false,
     mysql: {columnName: 'controlador', dataType: 'varchar', dataLength: 50, dataPrecision: null, dataScale: null, nullable: 'Y', generated: false},
   })
   controlador?: string;

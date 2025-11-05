@@ -325,7 +325,6 @@ export class PermisoController {
   })
   async buscarPermiso(
     @param.query.string('rolId') rolId: string,
-    @param.query.string('modulo') modulo: string,
     @param.query.string('controlador') controlador: string,
     @param.query.string('accion') accion: string,
 
@@ -333,7 +332,6 @@ export class PermisoController {
     const filter: Filter<Permiso> = {
       where: {
         rolId: rolId,
-        modulo: modulo,
         controlador: controlador,
         accion: accion,
       },
