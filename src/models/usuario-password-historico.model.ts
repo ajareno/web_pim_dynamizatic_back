@@ -77,9 +77,9 @@ export class UsuarioPasswordHistorico extends Entity {
     precision: 10,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_creacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
+    mysql: {columnName: 'usuarioCreacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'N', generated: false},
   })
-  usuCreacion: number;
+  usuarioCreacion: number;
 
   @property({
     type: 'number',
@@ -87,9 +87,9 @@ export class UsuarioPasswordHistorico extends Entity {
     precision: 10,
     scale: 0,
     generated: false,
-    mysql: {columnName: 'usu_modificacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
+    mysql: {columnName: 'usuarioModificacion', dataType: 'int', dataLength: null, dataPrecision: 10, dataScale: 0, nullable: 'Y', generated: false},
   })
-  usuModificacion?: number;
+  usuarioModificacion?: number;
 
   // Define well-known properties here
 
