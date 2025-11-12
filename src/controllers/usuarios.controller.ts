@@ -402,7 +402,7 @@ export class UsuariosController {
         return { status: 'ERROR', message: 'No se encontró la plantilla de correo.' };
       }
 
-      let htmlContent = plantillaRegistro[0]['cuerpo'] ? plantillaRegistro[0]['cuerpo'].toString('latin1') : '';
+      let htmlContent = plantillaRegistro[0]['cuerpo'] ? plantillaRegistro[0]['cuerpo'].toString('utf8') : '';
 
       //Obtengo la empresa
       const dataSourceEmpresa = this.empresaRepository.dataSource;
